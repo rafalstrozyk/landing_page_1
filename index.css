@@ -1,0 +1,142 @@
+:root {
+  --color-one: #bb0070;
+  --color-two: #dd0084;
+  --color-three: #493240;
+  --color-two-rgba: rgba(221, 0, 132, 0.6);
+  --color-three-rgba: rgba(73, 50, 64, 0.6);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: block;
+  height: 100%;
+  background: var(--color-one);
+}
+
+.background-shape-one {
+  z-index: -10;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(
+    85% 0,
+    100% 0,
+    100% 12%,
+    40% 50%,
+    100% 92%,
+    100% 100%,
+    88% 100%,
+    5% 50%
+  );
+  background: var(--color-two-rgba);
+  background: -moz-linear-gradient(
+    90deg,
+    var(--color-two-rgba) 66%,
+    var(--color-three-rgba) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    var(--color-two-rgba) 66%,
+    var(--color-three-rgba) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    var(--color-two-rgba) 66%,
+    var(--color-three-rgba) 100%
+  );
+}
+
+.shape-background-1 {
+  background: var(--color-three-rgba);
+  background: linear-gradient(
+    180deg,
+    var(--color-three-rgba) 0%,
+    var(--color-two-rgba) 100%
+  );
+}
+.shape-background-2 {
+  background: var(--color-three-rgba);
+  background: linear-gradient(
+    180deg,
+    var(--color-two-rgba) 0%,
+    var(--color-three-rgba) 100%
+  );
+}
+
+.shape-rhombus {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.shape {
+  position: fixed;
+  z-index: -2;
+}
+
+.shape-big {
+  width: 5vw;
+  height: 5vw;
+}
+
+.shape-small {
+  width: 1vw;
+  height: 1vw;
+}
+
+.shape-medium {
+  width: 3vw;
+  height: 3vw;
+}
+
+#shape-poz-1 {
+  transform: rotate(20deg);
+  top: 8%;
+  left: 10%;
+}
+#shape-poz-2 {
+  transform: rotate(50deg);
+  top: 45%;
+  right: 40%;
+}
+#shape-poz-3 {
+  transform: rotate(90deg);
+  bottom: 15%;
+  left: 25%;
+}
+#shape-poz-4 {
+  transform: rotate(35deg);
+  top: 23%;
+  left: 29%;
+}
+#shape-poz-5 {
+  transform: rotate(5deg);
+  top: 5%;
+  left: 39%;
+}
+#shape-poz-6 {
+  transform: rotate(17deg);
+  bottom: 55%;
+  right: 15%;
+}
+#shape-poz-7 {
+  transform: rotate(70deg);
+  bottom: 34%;
+  right: 29%;
+}
+#shape-poz-8 {
+  transform: rotate(65deg);
+  bottom: 45%;
+  right: 2%;
+}
